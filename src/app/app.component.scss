@@ -1,0 +1,452 @@
+// Обёртка для позициоинирования по центру
+.table {
+  &-content {
+    &-wrapper {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #E5E5E5;
+    }
+
+    // Общая обёртка формы
+    &-wrap {
+      width: 1266px;
+      background: white;
+      border-radius: 12px;
+    }
+  }
+
+  &-header {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    border-bottom: 2px solid gainsboro;
+
+    &__btn-add,
+    &__btn-delete {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__btn-add,
+    &__btn-delete {
+      cursor: pointer;
+      background: none;
+    }
+  }
+}
+
+
+// Контейнер элементов таблицы
+.form {
+  &-container {
+    display: flex;
+    flex-direction: column;
+
+    &__header, &__content, &__footer {
+      display: flex;
+      align-items: center;
+      height: 48px;
+      padding-left: 16px;
+      background: #F7F7F7;
+      border-bottom: 1px solid gainsboro;
+    }
+
+    &__footer {
+      height: 55px;
+      background: white;
+      border-radius: 12px;
+    }
+
+    &__content {
+      background: white;
+
+      &_background {
+        background: white;
+        transition: background .2s;
+
+        &:hover {
+          background: linear-gradient(90deg, rgba(255,255,255,1) 90%, rgba(238,239,239,1) 100%);
+        }
+      }
+
+      &_background-focus {
+        background: #1088FF0D;
+        transition: background .2s;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &-item-input {
+    &__wrap {
+      display: flex;
+      align-items: center;
+      column-gap: 19px;
+    }
+  }
+
+  &-item-header, &-item {
+    &__container {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+    }
+
+    &__checkbox {
+      &-label-text {
+        word-wrap: break-word;
+        width: 265px;
+      }
+    }
+
+    // Стилизация checkbox
+    &__checkbox-wrap {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      width: 269px;
+
+      & input[type = checkbox] {
+        display: none;
+
+        &:checked + label {
+          border: 2px solid #0080FF;
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+
+      & label {
+        position: relative;
+        min-width: 16px;
+        height: 16px;
+        border: 2px solid #9E9E9E;
+        border-radius: 4px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 8px;
+          height: 2px;
+          background: #0080FF;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: .2s;
+        }
+      }
+    }
+
+    &__email,
+    &__phone {
+      width: 280px;
+      word-break: break-word;
+    }
+  }
+
+  &-item {
+    justify-content: space-between;
+    padding: 10px 16px;
+    height: 100%;
+    min-height: 58px;
+
+    &__checkbox-wrap {
+      & label {
+        &::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 3px;
+          height: 6px;
+          border-bottom: 2px solid #0080FF;
+          border-right: 2px solid #0080FF;
+          transform: rotate(45deg) translate(-90%, -20%);
+          background: none;
+          top: 50%;
+          left: 50%;
+          opacity: 0;
+          transition: .2s;
+        }
+      }
+    }
+
+    &__wrap {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+    }
+
+    &__edit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      width: 70px;
+      height: 48px;
+    }
+
+    &__edit-btn {
+      display: flex;
+      column-gap: 8px;
+      padding-right: 16px;
+    }
+
+    &__icon-edit {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__btn-edit {
+      background: none;
+      cursor: pointer;
+    }
+  }
+}
+
+// Стилизация кнопок
+.edit-btn {
+  &__save,
+  &__cancel {
+    cursor: pointer;
+    height: 36px;
+    width: 94px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #979797;
+    color: #979797;
+  }
+
+  &__save {
+    background: #0080FF;
+    border: none;
+    color: white;
+  }
+}
+
+// Стилизация модального окна
+.modal-form-delete {
+  &__substrate {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.32;
+    background: #263238;
+    z-index: 5;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 560px;
+    height: 154px;
+    background: white;
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: auto;
+    z-index: 10;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.15px;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.44px;
+    margin-bottom: 32px;
+  }
+
+  &__btn {
+    color:#2F7FD5;
+    background: none;
+    width: 88px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.75px;
+
+    &_red {
+      color: #FF0000;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: flex-end;
+      column-gap: 12px;
+    }
+  }
+}
+
+// Стилизация при включённых input
+.form-item-input {
+  &__full-name, &__email, &__phone {
+    padding: 10px 12px 10px 8px;
+    background: rgba(0, 128, 255, 0.1);
+    border-radius: 8px;
+    width: 273px;
+  }
+
+  &__email, &__phone {
+    width: 279px;
+  }
+
+  &__checkbox-wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    width: 269px;
+
+    & input[type = checkbox] {
+      display: none;
+
+      &:checked + label {
+        border: 2px solid #0080FF;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    & label {
+      position: relative;
+      display: block;
+      min-width: 16px;
+      height: 16px;
+      border: 2px solid #9E9E9E;
+      border-radius: 4px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 8px;
+        height: 2px;
+        background: #0080FF;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: .2s;
+      }
+    }
+  }
+}
+
+// Стилизация кнопок добавления и удаления пользователя
+.table-header {
+  &__btn-add-focus {
+    & path {
+      fill: #0080FF;
+    }
+  }
+
+  &__btn-delete-focus {
+    & path {
+      fill: #FF0000;
+    }
+  }
+
+  &__btn-add:hover {
+    & path {
+      fill: #0080FF;
+    }
+  }
+
+  &__btn-delete:hover {
+    & path {
+      fill: #FF0000;
+    }
+  }
+
+  &__icon-add, &__icon-delete {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+
+.form-item-add {
+  justify-content: space-between;
+  padding: 10px 16px;
+  height: 100%;
+  min-height: 58px;
+}
+
+.form-container-add__content {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding-left: 16px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.form-item-add__wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 19px;
+}
+
+.form-item-input-add__full-name, .form-item-input-add__email, .form-item-input-add__phone {
+  padding: 10px 12px 10px 8px;
+  background: #FFE5E5;
+  border-radius: 8px;
+  width: 279px;
+}
+
+
+.form-item__checkbox-wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  width: 269px;
+}
+
+.form-item-add__edit-btn {
+  display: flex;
+  column-gap: 8px;
+  padding-right: 16px;
+}
+
+.form-item-add__btn-save {
+  cursor: pointer;
+  height: 36px;
+  width: 94px;
+  background: rgba(0, 128, 255, 0.3);
+  border-radius: 8px;
+  border: medium none;
+  color: white;
+}
+
+.form-item-add__btn-cancel {
+  cursor: pointer;
+  height: 36px;
+  width: 94px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid rgb(151, 151, 151);
+  color: rgb(151, 151, 151);
+}

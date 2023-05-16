@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "id": "fodpDLE",
+      "name": "Алина",
+      "surname": "Сероус",
+      "email": "alina@mail.ru",
+      "phone": "+79370206976",
+      "idBtn": "bdsprddprk",
+      "validate": {
+        "nameValidate": false,
+        "emailValidate": false,
+        "phoneValidate": false
+      }
+    },
+    {
+      "id": "pdFrkdp",
+      "name": "Григорий",
+      "surname": "Овсяников",
+      "email": "ovsyanik@gmail.com",
+      "phone": "+79370206956",
+      "idBtn": "dprjfrpdmt",
+      "validate": {
+        "nameValidate": false,
+        "emailValidate": false,
+        "phoneValidate": false
+      }
+    },
+    {
+      "id": "pd9fPDF",
+      "name": "Ангелина",
+      "surname": "Фролова",
+      "email": "angela@mail.ru",
+      "phone": "+79050280887",
+      "idBtn": "dpfrlamrof",
+      "validate": {
+        "nameValidate": false,
+        "emailValidate": false,
+        "phoneValidate": false
+      }
+    },
+    {
+      "id": "dpfdPFr",
+      "name": "Владимир",
+      "surname": "Золотов",
+      "email": "zolotov94@mail.ru",
+      "phone": "+79050206987",
+      "idBtn": "pfrlsdeodf",
+      "validate": {
+        "nameValidate": false,
+        "emailValidate": false,
+        "phoneValidate": false
+      }
+    },
+    {
+      "id": "KxNBkZZ",
+      "name": "Виктор",
+      "surname": "Зайцев",
+      "email": "victorzayaz@gmail.com",
+      "phone": "+79374032040",
+      "idBtn": "dеbfdqkqut",
+      "validate": {
+        "nameValidate": false,
+        "emailValidate": false,
+        "phoneValidate": false
+      }
+    }
+  ]
+}
