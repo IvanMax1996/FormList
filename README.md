@@ -1,27 +1,42 @@
-# FormListProject
+# 🚀 Инструкция по запуску проекта
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+## Предварительные требования
 
-## Development server
+Убедитесь, что у вас установлены:
+- Node.js
+- npm (Node Package Manager)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Шаги для запуска
 
-## Code scaffolding
+### 1. Открытие проекта
+Откройте папку **FormList** в вашем редакторе кода.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 2. Установка зависимостей
+Находясь в корневой директории проекта, выполните команду:
+```bash
+npm i
+```
 
-## Build
+### 3. Запуск JSON-сервера
+Перейдите в каталог с данными:
+```bash
+cd src/assets
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Запустите виртуальный сервер:
+```bash
+json-server --watch users.json
+```
 
-## Running unit tests
+> **Примечание:** Оставьте этот терминал открытым, сервер должен работать в фоновом режиме.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 4. Запуск проекта
+Откройте **новый терминал** в корневой директории проекта и выполните:
+```bash
+npm run
+```
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## ✅ Готово!
+Проект успешно запущен и готов к работе.
