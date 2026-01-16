@@ -1,0 +1,14 @@
+# Node
+.node_modules/
+
+# IDEs and editors
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Miscellaneous
+.angular/
+
+# WatchConfig
+.watchmanconfig
